@@ -1,0 +1,19 @@
+ 
+body, html {
+  height: 100%;
+}
+body { 
+    background-image: url('https://media1.thehungryjpeg.com/thumbs2/ori_3505557_685b396b05a73a502cd83335181d1aece8d81fcf_clean-blue-sky-and-green-grass-vector-background.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+#title{
+    color:#546e8a;
+    font-size: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  
+} 
+

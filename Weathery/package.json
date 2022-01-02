@@ -1,0 +1,39 @@
+{
+  "name": "Weathery",
+  "version": "1.0.0",
+  "description": "Weathery is a weather history app that provides students and reaserches with a data collection tracking how the weather has progressed and changed over time. After you choose your location you will be asked to choose a month and day. You should be provided with a chart of that same day's weathor history to as far back as possible. To make it more visiual, users will be provided with a line graph for the increase and decrease of weather measurments wether it's celsius/farenhiet degree, rain percentage, humidty and more!.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
+    "start": "node app.js", 
+    "start:debug": "node --inspect app.js"
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.20.1",
+    "css-loader": "^6.5.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-fetch": "^3.1.0",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "engines": {
+    "node": "14.x" 
+  }
+}
