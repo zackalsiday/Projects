@@ -17,4 +17,4 @@
 //     timeEl.innerHTML = hour + ':' + minutes + ' ' + `<span
 //     id="am-pm">${ampm}</span>`
 // }, 1000);
-console.log('zack')
+// console.log('zack')
