@@ -107,9 +107,10 @@ body {
 #current-temp{
     background:rgba(60, 78, 78, 0.404);
     display: flex;
-     width: 100%;
+    width: 80%;
     justify-content: center;
-    margin-top: 200px;
+    margin-left: 190px;
+    margin-top: 600px;
     font-size: 25px;
 }
 

@@ -6,11 +6,12 @@ const timezone = document.getElementById('time-zone')
 const countryEl = document.getElementById('country')
 const weatherForecastEl = document.getElementById('current-temp')
 const currentTempEl = document.getElementById('current-temp')
+const mapsweather = document.getElementById('map')
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
     'Oct', 'Nov', 'Dec']
-console.log(timeEl)
-console.log(dateEl)
+// console.log(timeEl)
+// console.log(dateEl)
 const API_KEY = '487b57eb81f63c279aa714573aad9aec'
 setInterval(() => {
     const time = new Date();
@@ -32,9 +33,9 @@ getWeatherData()
 function getWeatherData() {
     navigator.geolocation.getCurrentPosition((success) => {
         let { latitude, longitude } = success.coords;
-        console.log({ latitude, longitude })
+        // console.log({ latitude, longitude })
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
-            console.log(data)
+            // console.log(data)
             showWeatherData(data)
         })
     })
@@ -43,14 +44,17 @@ getLocationinfo()
 function getLocationinfo(){
     navigator.geolocation.getCurrentPosition((success) => {
         let { latitude, longitude } = success.coords;
-        console.log({ latitude, longitude })
+        // console.log({ latitude, longitude })
         fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${API_KEY}`).then(res => res.json()).then(loc => {
-            console.log(loc)
+            // console.log(loc)
+            
             timezone.innerHTML = `<div class="time-zone" id="time-zone">${loc[0].name},${loc[0].state}</div>`
             countryEl.innerHTML = `<div id="country" class="country">${loc[0].country}</div>`
         })
     })
+  
 }
+
 function showWeatherData(data) {
     let { humidity, pressure, clouds, wind_speed } = data.current
     currentWeatherItemsEl.innerHTML = ` <div class="weather-item">
@@ -101,6 +105,13 @@ function showWeatherData(data) {
      })
      weatherForecastEl.innerHTML = otherDayForcast
 }
+ getWeathermap()
+    function getWeathermap() {
+            // fetch(`https://tile.openweathermap.org/map/clouds_new/2/2/2.png?appid=${API_KEY}`).then(res => res.json()).then(maps => {console.log(maps) 
+            
+    //  })
+       
+    }
 });
 
 
