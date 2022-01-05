@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <script src="./dist/main.js"></script>
+    
+
+    <title>Cloud</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="current-info">
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 24 may
+                </div>
+                <div class="others" id="current-weather-items">
+                    <div class="weather-item">
+                        <div>Humidity</div>
+                        <div>95.2%</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Pressure</div>
+                        <div>121</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Wind Speed</div>
+                        <div>222</div>
+                    </div>
+                </div>
+            </div>
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">America/California</div>
+                <div id="country" class="country"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+        
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="day">Day Name</div>
+                <div class="temp">Night - Celsius; C</div>
+                <div class="temp">Day - Celsius; C</div>
+        </div>
+    
+        
+     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</body>
+</html>
