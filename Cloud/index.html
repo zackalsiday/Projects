@@ -7,14 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./src/styles/index.css" />
     <script src="./dist/main.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/maps/maps.css">
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/services/services-web.min.js"></script>
 
     <title>Cloud</title>
+
+    
+        
 </head>
 
 <body>
+    
     <div class="container">
-        <div class = "map" id="map"></div>
+         <!-- <div class="wholemap">
+            <div id="left">
+                <div id="controls">
+                    Location:<br />
+                    <input class="text" id="location" type="text" />
+                    <br /><br />
+                    Weather Layer:<br />
+                    <select onchange="updateLayer(this)">
+                        <option value="">None</option>
+                        <option value="clouds_new">Clouds</option>
+                        <option value="precipitation_new">Precipitation</option>
+                        <option value="pressure_new">Pressure</option>
+                        <option value="wind_new">Wind</option>
+                        <option value="temp_new">Temperature</option>
+                    </select>
+                    <br /><br />
+                    Units:<br />
+                    <input type="radio" name="units" value="metric" onchange="updateUnits(this)">℃</input>
+                    <input type="radio" name="units" value="imperial" checked onchange="updateUnits(this)">℉</input>
+                    <br /><br />
+                    <input type="button" value="Search" onclick="findLocation()" />
+                </div>
+            </div>
+            
+            <!-- <div class="clear" /> -->
+        </div> --> -->
+   
         <div class="current-info">
             <div class="date-container">
                 <div class="time" id="time">
@@ -41,10 +73,45 @@
             <div class="place-container">
                 <div class="time-zone" id="time-zone">America/California</div>
                 <div id="country" class="country"></div>
+                
             </div>
+           
         </div>
-
+            <div class="wholemap">
+                <div id="left">
+                    <div id="controls">
+                        Location:<br />
+                        <input class="text" id="location" type="text" />
+                        <br /><br />
+                        Weather Layer:<br />
+                        <select id = 'layer'>
+                            <option value="">None</option>
+                            <option value="clouds_new">Clouds</option>
+                            <option value="precipitation_new">Precipitation</option>
+                            <option value="pressure_new">Pressure</option>
+                            <option value="wind_new">Wind</option>
+                            <option value="temp_new">Temperature</option>
+                        </select>
+                        <br /><br />
+                        Units:<br />
+                        <input type="radio" name="units" value="metric" onchange="updateUnits(this)">℃</input>
+                        <input type="radio" name="units" value="imperial" checked onchange="updateUnits(this)">℉</input>
+                        <br /><br />
+                        <input id="searchbutton" type="button" value="Search"  />
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="map" class="map"></div>
+                </div>
+                <!-- <div class="clear" /> -->
+            </div> -->
+            <!-- <div id="right">
+                <div id="map" class="map"></div>
+            </div> -->
     </div>
+
+
+    
     <div class="future-forecast">
         <div class="today" id="current-temp">
         
@@ -57,9 +124,12 @@
         
      </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
   
 </body>
+
 </html>
+

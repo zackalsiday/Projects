@@ -40,12 +40,15 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 .current-info .others{
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 5px;
+   
     padding: 10px
+  
 } 
 
 .current-info .others .weather-item{
@@ -72,8 +75,10 @@ body {
     font-size:30px;
 }
 
+   
 .place-container{
     text-align: end;
+    margin-right: 20px;
 }
 
 .place-container .time-zone{
@@ -86,10 +91,9 @@ body {
 
 .place-container .country{
     font-size: 25px;
-
 }
-
-.future-forecast{
+/* 
+.future-forecast{ 
     /* background:rgba(60, 78, 78, 0.404); */
 
     /* margin-top: 10px; */
@@ -98,20 +102,50 @@ body {
   
     /* justify-content: center; */
 
-}
+/* } */
 
 /* .future-forecast .weather-forecast{
     display: flex
 } */
+    .wholemap{margin-left: 50px}
+    #left, #right {  height: 80vh }
+      #left { float: left; width: 200px; overflow-y: auto; }
+      #right { margin-left: 200px; }
+      #map { width: 50%; height: 70%; }
+      #controls, #summary { padding: 5px; }
+      input.text { margin-bottom: 5px; }
+      div.clear { clear: both; }
+      div.popup>img { border: 1px solid gray; vertical-align: middle; }
+      div.popup>h3 { display: inline; vertical-align: middle; margin-left: 5px; }
+
 
 #current-temp{
     background:rgba(60, 78, 78, 0.404);
     display: flex;
     width: 80%;
     justify-content: center;
-    margin-left: 190px;
-    margin-top: 600px;
+    margin-left: 250px;
+    /* margin-bottom: 00px; */
     font-size: 25px;
+}
+  .wholemap{
+      margin-left: 500px;
+
+  }
+  
+#right{
+    height: 900px;
+}
+#left,#rigth{
+    height: 200px;
+}
+
+#left{
+    height:500px;
+    font-size: 30px;
+}
+.text{
+    height: 30px;
 }
 
 
@@ -128,7 +162,13 @@ body {
     display: flex;
      width: 280%;
     justify-content: left;
+   
     
     /* margin-top: 10px; */
 }
+
 }
+
+  
+
+    
